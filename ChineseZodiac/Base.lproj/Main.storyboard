@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-c2-Kxf">
+                                <rect key="frame" x="123" y="58" width="124" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-nD-fia">
+                                <rect key="frame" x="137" y="109" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="xOt-cb-pep"/>
+                                </constraints>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="clickOkBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7B-0Q-CTI"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="DNp-Zi-oG0">
+                                <rect key="frame" x="32" y="178" width="256" height="256"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出生年份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-d1-vXg">
+                                <rect key="frame" x="37" y="62" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="xg2-vb-3JO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KFS-nD-fia" firstAttribute="top" secondItem="2bf-c2-Kxf" secondAttribute="bottom" constant="21" id="28a-5k-LOy"/>
+                            <constraint firstItem="2bf-c2-Kxf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="CvV-6x-7G4"/>
+                            <constraint firstItem="XvK-d1-vXg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="QJL-LR-EXG"/>
+                            <constraint firstItem="DNp-Zi-oG0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTC-LC-qsF"/>
+                            <constraint firstItem="2bf-c2-Kxf" firstAttribute="centerY" secondItem="XvK-d1-vXg" secondAttribute="centerY" id="gDE-oy-2Kc"/>
+                            <constraint firstItem="XvK-d1-vXg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="ghn-Zg-l3f"/>
+                            <constraint firstItem="2bf-c2-Kxf" firstAttribute="leading" secondItem="XvK-d1-vXg" secondAttribute="trailing" constant="8" symbolic="YES" id="ipN-lC-950"/>
+                            <constraint firstItem="DNp-Zi-oG0" firstAttribute="centerX" secondItem="KFS-nD-fia" secondAttribute="centerX" id="kRP-t5-Ma5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2bf-c2-Kxf" secondAttribute="trailing" constant="57" id="pbg-mv-rJ0"/>
+                            <constraint firstItem="DNp-Zi-oG0" firstAttribute="top" secondItem="KFS-nD-fia" secondAttribute="bottom" constant="39" id="sXF-o6-8C3"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="DNp-Zi-oG0" id="cge-9B-QuG"/>
+                        <outlet property="yearOfBirth" destination="2bf-c2-Kxf" id="zXO-pB-XVO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0" width="256" height="256"/>
+    </resources>
+</document>
